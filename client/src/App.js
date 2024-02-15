@@ -32,7 +32,7 @@ function App() {
           <Navbar />
             <Routes>
               <Route path="/" element={<Home />} exact />
-              <Route path="/create-post" element={<CreatePost />} exact />
+              <Route path="/post" element={<CreatePost />} exact />
             </Routes>
           </BrowserRouter>
         </Wrapper>

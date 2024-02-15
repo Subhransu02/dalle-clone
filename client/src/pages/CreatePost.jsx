@@ -7,7 +7,7 @@ const Container = styled.div`
 `;
 const CreatePost = () => {
   return (
-    <div>CreatePost</div>
+    <Container>CreatePost</Container>
   )
 }
 
