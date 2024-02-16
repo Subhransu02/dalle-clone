@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SearchBar from "../components/SearchBar";
+import ImageCard from "../components/ImageCard";
 
 const Container = styled.div`
   height: 100%;
@@ -34,7 +35,36 @@ const Span = styled.span`
   font-weight: 800;
   color: ${({ theme }) => theme.secondary};
 `;
+
+const Wrapper = styled.div`
+  width: 100%;
+  max-width: 1400px;
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+`;
+
+const CardWrapper = styled.div`
+  display: grid;
+  gap: 20px;
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 640px) and (max-width: 1199px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 639px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
 const Home = () => {
+  const item = {
+    photo:
+      "https://st2.depositphotos.com/45307138/50235/i/450/depositphotos_502356476-stock-photo-sunset-mirror-padana-plain-river.jpg",
+    author: "Subhransu",
+    prompt: "HEyYa!!",
+  };
   return (
     <Container>
       <Headline>
@@ -42,6 +72,26 @@ const Home = () => {
         <Span>⦿ Generated with AI ⦿</Span>
       </Headline>
       <SearchBar />
+      <Wrapper>
+        <CardWrapper>
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+          <ImageCard item={item} />
+
+        </CardWrapper>
+      </Wrapper>
     </Container>
   );
 };
