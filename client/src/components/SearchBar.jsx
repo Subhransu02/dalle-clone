@@ -17,7 +17,7 @@ const SearchBarContainer = styled.div`
   }
 `;
 
-const SearchBar = () => {
+const SearchBar = ({search, setSearch}) => {
   return (
     <SearchBarContainer>
       <SearchOutlined />
@@ -33,6 +33,8 @@ const SearchBar = () => {
           fontWeight: 500,
           width: "100%",
         }}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
     </SearchBarContainer>
   );
