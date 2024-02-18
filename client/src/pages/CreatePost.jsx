@@ -9,7 +9,7 @@ const Container = styled.div`
   overflow-y: scroll;
   background: ${({ theme }) => theme.bg};
   padding: 30px 30px;
-  padding-botton: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
